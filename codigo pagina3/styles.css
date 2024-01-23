@@ -1,1 +1,1049 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+.header,
+.product-section {
+  background-image: url("assets/fondoVectores.png"); /* Reemplaza con la ruta correcta de tu imagen */
+  background-size: cover; /* Asegura que la imagen de fondo cubra todo el espacio disponible */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center center; /* Centra la imagen de fondo */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+.navbar {
+  background-color: #093931;
+  color: white;
+  display: flex;
+  justify-content: flex-end; /* Alinear los elementos al inicio (derecha) */
+  align-items: center; /* Alinear los elementos verticalmente al centro */
+  padding: 1rem 2rem;
+  font-family: "Cormorant Garamond", serif;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 2rem;
+  color: #f2c66d;
+  font-family: Cormorant Garamond;
+  margin-right: 36rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  margin-left: 2rem;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  left: 0;
+  background-color: #f2c66d;
+}
+
+.user-controls {
+  display: flex;
+  background-color: white;
+}
+
+.user-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2em;
+  margin-left: 1em;
+}
+
+.icon:hover {
+  opacity: 0.7; /* Efecto al pasar el mouse para indicar interactividad */
+}
+
+.user-icons .icon-link {
+  color: white;
+  text-decoration: none;
+  margin-left: 1rem;
+}
+
+.icon {
+  margin-left: 2rem;
+}
+
+/*seccion de las 4 imagenes pequeñas y la grande */
+.product-detail {
+  border: 1px dashed #ccc;
+  padding: 20px;
+  width: 300px; /* Ajusta el ancho según tu diseño */
+}
+
+.breadcrumbs {
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+  color: #0d554a;
+  font-family: "Cormorant Garamond";
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.375rem;
+}
+
+.product-images {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.thumbnails {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 4rem;
+  height: 5.125rem;
+  flex-shrink: 0;
+}
+
+.thumbnail {
+  border: 1px solid #fff;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.main-image {
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  background: url(<path-to-image>),
+    lightgray 0px -32px / 100% 110.063% no-repeat;
+  margin-left: 30%;
+  margin-top: -36%;
+}
+
+.main-image img {
+  /* width: 100%; Esto asegura que la imagen principal ocupe todo el ancho del contenedor 
+    height: auto;  Esto mantiene la relación de aspecto  */
+  width: 29.8125rem;
+  height: 39.75rem;
+  flex-shrink: 0;
+}
+
+/* apartado de luxury Charms Ring con option */
+.product-details {
+  background: #ffffff; /* Asegúrate de tener un fondo claro para que el texto sea legible */
+  padding: 20px; /* Ajusta esto según tu diseño */
+  max-width: 500px; /* O el ancho que prefieras */
+  margin: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra suave */
+  border-radius: 8px; /* Bordes redondeados */
+  margin-top: -50%;
+  margin-left: 43%;
+}
+
+h2 {
+  color: #0d554a;
+  font-family: "Cormorant Garamond";
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 3.5rem; /* 140% */
+}
+
+h5 {
+  color: #323842;
+  font-family: Manrope;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.625rem; /* 162.5% */
+}
+.price {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.product-options label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.colors {
+  margin-bottom: 15px;
+}
+
+.color-option {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 5px;
+  border: 1px solid #ddd; /* Añade un borde para distinguir en fondos claros */
+  cursor: pointer;
+}
+
+.size-selector {
+  display: flex;
+  align-items: center;
+}
+
+.sizes {
+  display: flex;
+  margin-left: 10px; /* Adjust spacing to your liking */
+}
+
+.size-option {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  margin-right: 5px; /* Space between buttons */
+  padding: 5px 10px; /* Padding inside buttons */
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.size-option.selected {
+  border-color: #ffa500; /* Highlight color for selected size */
+  color: #ffa500;
+}
+
+.size-option:hover {
+  background-color: #f8f8f8; /* Slight grey background on hover */
+}
+
+.size-guide {
+  margin-left: auto; /* Push the size guide link to the right */
+  text-decoration: none;
+  color: #000;
+  padding-left: 15px; /* Space before the link */
+}
+
+.size-guide:hover {
+  text-decoration: underline; /* Underline on hover for the link */
+}
+
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.quantity-selector button {
+  background: none;
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.quantity-selector input {
+  text-align: center;
+  width: 50px;
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+
+.add-to-bag {
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+.buy-now {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+/* Estilos para el resalte al pasar el mouse */
+.size-option:hover,
+.color-option:hover {
+  border-color: #333;
+}
+
+/* seccion de botones del header */
+
+.product-options--button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .add-to-bag,
+  .buy-now {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .add-to-bag {
+    border-radius: 1.625rem;
+    border: 1px solid #0d554a;
+    background: #fff;
+    display: flex;
+    width: 16.625rem;
+    padding: 0.75rem 0rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-right: -80%;
+  }
+
+  .buy-now {
+    border-radius: 1.625rem;
+    background: #0d554a;
+    display: flex;
+    width: 16.625rem;
+    padding: 0.75rem 0rem;
+    justify-content: center;
+    align-items: center;
+    margin-right: -18%;
+  }
+
+  .dropdowns select {
+    display: flex;
+    justify-content: flex-start; /* O puedes usar 'flex-start' para alinearlos a la izquierda */
+  }
+}
+
+.add-to-bag:hover,
+.buy-now:hover {
+  background-color: #555;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .product-options {
+    flex-direction: column;
+  }
+
+  .add-to-bag,
+  .buy-now {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .dropdowns {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dropdowns select {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+/* seccion titulo pequeñ0 e imagen con icono de video */
+.product-description-section {
+  max-width: 900px; 
+  margin: 0 auto; 
+  padding: 20px; 
+  margin-top: 20%;
+  margin-right: 25%;
+}
+
+h4{
+color: #323842;
+font-family: Manrope;
+font-size: 1rem;
+font-style: normal;
+font-weight: 400;
+line-height: 1.625rem; /* 162.5% */
+}
+
+.product-description-section h2 {
+    color: #0D554A;
+    font-family: "Cormorant Garamond";
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 3.5rem; /* 140% */
+}
+
+.product-description-section p {
+  font-size: 16px;
+  color: #666; 
+  line-height: 1.6; 
+  width: 64.5rem;
+  color: #323842;
+  font-family: Manrope;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.75rem; /* 155.556% */
+}
+
+.video-thumbnail {
+  position: relative; 
+  display: inline-block; 
+}
+
+.video-thumbnail img {
+  width: 100%; 
+  height: auto; 
+  border-radius: 8px; 
+  width: 64.5rem;
+  height: 36.3125rem;
+  flex-shrink: 0;
+  border-radius: 0.5rem;
+  background: url(<path-to-image>),
+    lightgray 0px -458px / 100% 202.065% no-repeat;
+}
+
+.play-button {
+  position: absolute; 
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  background-color: #fff; 
+  border: none; 
+  padding: 10px 15px; 
+  border-radius: 50%; 
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); 
+}
+
+
+.no-js .play-button {
+  display: none;
+}
+
+
+.play-button:hover {
+  background-color: #e0e0e0;
+}
+
+/* seccion de iconos amarillos */
+.info-section {
+    display: flex;
+    justify-content: space-around; /* Adjust the space as needed */
+    align-items: center;
+    background: #fff; /* Assuming a white background */
+    padding: 1rem 0; /* Vertical padding */
+  }
+  
+  .info-item {
+    text-align: center;
+    color: #333; /* Text color */
+    color: #9095a0;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.625rem; /* 162.5% */
+  }
+  
+  .info-item-title {
+    width: 4.375rem;
+    color: #171a1f;
+    text-align: center;
+    font-family: Cormorant Garamond;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.75rem; /* 155.556% */
+    margin-left: 38%;
+  }
+  
+  .info-item-title2 {
+    width: 7.5rem;
+    color: #171a1f;
+    text-align: center;
+    font-family: Cormorant Garamond;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.75rem; /* 155.556% */
+    margin-left: 32%;
+  }
+  
+  .info-item-title3 {
+    width: 8.9375rem;
+    color: #171a1f;
+    text-align: center;
+    font-family: Cormorant Garamond;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.75rem; /* 155.556% */
+    margin-left: 28%;
+  }
+  
+  .info-item img {
+    width: 3.875rem;
+    height: 3.875rem;
+    flex-shrink: 0; /* espacio entre cada icono */
+  }
+  
+  .info-item p {
+    width: 17.25rem;
+    color: #9095a0;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.625rem; /* 162.5% */
+  }
+  
+  .info-item-parrafo3 {
+    width: 17.25rem;
+    height: 2.5rem;
+    flex-shrink: 0;
+    color: #9095a0;
+    text-align: center;
+    font-family: Manrope;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.625rem; /* 162.5% */
+  }
+
+  /* seccion imagenes joyas */
+
+  .recommendations {
+    text-align: center;
+  }
+  
+  .items {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+  }
+  
+  .item {
+    width: 20%; /* Adjust based on your preference */
+    margin: 0.5rem;
+    text-align: center;
+  }
+  
+  .item img {
+    width: 100%; 
+    height: auto; 
+  }
+
+  .img5-item-joya{
+    width: 17.25rem;
+    height: 20rem;
+    flex-shrink: 0;
+  }
+  
+  .item p {
+    margin-top: 0.5rem;
+    color: #333;
+
+  }
+  
+ 
+  h2 {
+    color: #093931; 
+    margin-bottom: 1rem;
+  }
+  
+/* seccion footer */
+/* seccion footer */
+
+.footer {
+    background-color: #093931;
+    max-width: 100%;
+    overflow: hidden; /* Asegura que todo el contenido excedente se oculte */
+    width: 100%; /* Establece el ancho del footer al 100% del ancho del viewport */
+    box-sizing: border-box; /* Asegura que el padding y border estén incluidos en el ancho del elemento */
+  }
+  
+  .footer-container--top {
+    display: flex;
+  }
+  
+  .footer-container--article {
+    text-align: center;
+    align-items: center;
+    color: #fff;
+    position: relative;
+    left: 7%;
+    top: 7rem;
+    bottom: 5rem;
+    right: 10rem;
+    width: 50%;
+  }
+  
+  .article-footer--title {
+    font-size: 1.5em;
+    color: #fff;
+    font-weight: bold;
+    font-family: Cormorant Garamond;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 46px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  
+  .article-footer--texto {
+    font-family: Manrope;
+    text-align: justify;
+    font-weight: lighter;
+    width: 264px;
+    height: 104px;
+    top: 249px;
+    margin-top: 10px;
+    left: 132px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  
+  .footer-figure {
+    background-color: #171a1f4d;
+    display: flex;
+    width: 60%;
+    position: relative;
+    text-align: center;
+    border-right: 8px;
+    margin-right: 7%;
+    margin-top: 5%;
+  }
+  
+  .footer-figure--img {
+    width: 300px;
+    height: 375px;
+    top: 50px;
+    left: 612px;
+    border-radius: 8px;
+  }
+  
+  .footer-figure--figcaption {
+    font-family: Manrope;
+    text-align: center;
+    color: #fff;
+    width: 324px;
+    height: 182px;
+    left: 336px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-left: 40px;
+    margin-top: 60px; /* Ajusta este valor para bajar el texto */
+    margin-left: 20px; /* Añade espacio a la izquierda */
+  }
+  
+  .figcaption--h1 {
+    font-family: Manrope;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: 15px;
+  }
+  
+  .figcaption--p {
+    font-size: 16px;
+  }
+  
+  .footer-container--medio {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-top: 7%;
+  }
+  
+  .section-footer-items {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    margin-right: 0.5rem;
+  }
+  
+  .footer-menu-right,
+  .footer-menu-left {
+    color: #fff;
+    font-family: Manrope;
+    font-size: 1rem;
+    margin-bottom: 50px;
+    width: 120px;
+    height: 22px;
+    top: 50px;
+    left: -100px;
+    font-family: Manrope;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 31px;
+    /* letter-spacing: 0em; */
+    text-align: left;
+    margin-left: -220%;
+  }
+  
+  .footer-input {
+    width: 25rem;
+    border-radius: 18px 0px 0px 18px;
+    color: #fff;
+    border: 1px solid #fff;
+    height: 2.5rem;
+    font-family: Manrope;
+    font-size: 1rem;
+    background-color: #093931;
+    margin-top: -50px;
+    margin-left: -30%;
+  }
+  
+  
+  .footer-button {
+    background-color: #f2c66d;
+    font-family: Manrope;
+    font-size: 1rem;
+    border-style: none;
+    border-radius: 0px 18px 18px 0px;
+    width: 7rem;
+    height: 2.5rem;
+    margin-left: -0.25rem;
+    margin-top: -50px;
+  }
+
+  .footer-bottom, .p{
+  color: #fff;
+  }
+  
+  .footer-icons {
+    display: flex;
+    align-items: center;
+    align-items: center;
+    color: #fff;
+    position: relative;
+    left: 79%;
+    top: 10px;
+    display: inline-flex; /* Alinea los iconos en línea y permite el uso de flexbox */
+    justify-content: center; /* Centra los iconos horizontalmente */
+  }
+  
+  .footer-icon--twitter {
+    margin-right: 20px;
+  }
+  
+  .footer-icon--facebook {
+    margin-right: 20px;
+  }
+  
+  .footer-icon--linkedln {
+    margin-right: 20px;
+  }
+  
+  .footer-title--suscribe {
+    height: 30px;
+  }
+  
+  .footer-title--suscribe {
+    font-family: Cormorant Garamond;
+    color:#fff;
+    font-size: 20px;
+    font-weight: 400px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: -10px;
+    margin-left: -28%;
+  }
+  
+  .footer-parrafo--suscribe {
+    font-family: Manrope;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    height: 28px;
+    margin-left: -28%;
+  }
+  
+  .footer-imagen--email---input {
+    display: flex;
+    align-items: center;
+    align-items: center;
+    color: #fff;
+    position: relative;
+    left: -28%;
+    top: 19px;
+  }
+  
+  .footer--caption---button {
+    display: flex;
+    margin-left: 230px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .footer-button--caption---right,
+  .footer-button--caption---left {
+    /* border-width: 0 5px 5px 0; */
+    border-color: transparent transparent white white;
+    margin-right: 10px;
+    background-color: transparent;
+    border: solid white; /* Añade un borde blanco */
+    color: white;
+    border-radius: 50%; /* Hace los botones redondos */
+  }
+  
+  .footer-button--caption---right {
+    border-color: transparent transparent white white;
+    border: solid white;
+    border-width: 0 0px 0px 0; /* Grosor del borde para formar la flecha */
+    padding: 3px; /* Tamaño de la flecha */
+  }
+  
+  .footer-button--caption---left {
+    border-color: transparent transparent white white;
+    border: solid white;
+    border-width: 0 0px 0px 0; /* Grosor del borde para formar la flecha */
+    padding: 3px; /* Tamaño de la flecha */
+  }
+  
+  @media (max-width: 480px) {
+    .navbar {
+      display: none; /* Oculta la barra de navegación en dispositivos muy pequeños */
+    }
+  
+    .icon-container {
+      width: 100%; /* Asegúrate de que los íconos ocupen todo el ancho */
+    }
+  
+    .icon {
+      padding: 10px; /* Reduce el padding para los íconos */
+      margin: 0 5px; /* Reduce el margen entre íconos */
+    }
+  }
+  
+  /* Reglas generales de responsividad para dispositivos pequeños */
+  @media (max-width: 768px) {
+    .footer-container--top {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-container--article,
+    .footer-figure {
+      width: 100%;
+      padding: 0 15px;
+      left: 0;
+      top: 0;
+      right: 0;
+      margin-top: 20px;
+    }
+  
+    .footer-figure--img {
+      width: 40%; /* Ajustar según sea necesario */
+      height: auto; /* Mantiene la relación de aspecto */
+      margin: 0 auto; /* Centra la imagen */
+    }
+  
+    .footer--caption---button {
+      justify-content: space-around;
+      margin-left: 0; /* Alinea los botones en el centro */
+    }
+  
+    .footer-container--medio {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-menu-right,
+    .footer-menu-left {
+      text-align: center;
+      margin-bottom: 20px;
+      width: auto;
+    }
+  
+    .footer-input,
+    .footer-button {
+      width: auto;
+      max-width: 90%;
+      margin-top: 10px;
+    }
+  
+    .footer-icons {
+      justify-content: center;
+      left: 0;
+      margin-top: 20px;
+    }
+  
+    .footer-container--top,
+    .footer-container--medio,
+    .footer-media,
+    .footer-bottom {
+      max-width: 100%; /* Establece el ancho máximo al 100% del ancho de su contenedor padre */
+      box-sizing: border-box; /* Incluye padding y border en el ancho del elemento */
+    }
+  }
+  
+  /* Reglas específicas para pantallas muy pequeñas, como teléfonos en orientación vertical */
+  @media (max-width: 480px) {
+    .article-footer--title {
+      font-size: 24px; /* Tamaño de fuente más pequeño para títulos */
+    }
+  
+    .footer-figure--figcaption,
+    .figcaption--h1,
+    .figcaption--p {
+      font-size: 10px; /* Tamaño de fuente más pequeño para textos */
+    }
+  
+    .footer--caption---button button {
+      display: none;
+    }
+  
+    /* .footer-title--suscribe {
+      height: 30px;
+    } */
+  
+    .footer-title--suscribe {
+      font-family: Cormorant Garamond;
+      margin-right: 100%;
+    }
+  }
+  
+  /* Media query para pantallas más pequeñas */
+  @media (max-width: 768px) {
+    .carrusel-primerajoya,
+    .carrusel-segundajoya,
+    .carrusel-tercerajoya,
+    .carrusel-cuartajoya {
+      max-width: calc(
+        50% - 20px
+      ); /* Dos elementos en una fila en pantallas más pequeñas */
+    }
+  }
+  
+  /* Media query para pantallas muy pequeñas */
+  @media (max-width: 480px) {
+    .carrusel-primerajoya,
+    .carrusel-segundajoya,
+    .carrusel-tercerajoya,
+    .carrusel-cuartajoya {
+      max-width: 100%; /* Un elemento por fila en pantallas muy pequeñas */
+    }
+  }
+
+  
+  .header___mobiLenav{
+    display: none;
+  }
+  
+  @media only screen and (max-width:520px
+           ){
+    .checkbtn{
+        display: block;
+    }
+    .menu-icon{
+        position: absolute;
+        display: block;
+        position: fixed;
+        top: 30px;
+        margin-left: -200px;
+        cursor: pointer;
+        align-items: center;
+        height: auto;
+        filter: invert(99%) sepia(3%) saturate(2%) hue-rotate(96deg) brightness(106%)
+        contrast(97%);
+        z-index: 1000; /* Asegura que esté sobre otros elementos */
+       }
+  
+       .navbar{
+        z-index: 1000; /* Asegúrate de que se muestre por encima de otros elementos */
+       }
+  
+   .logo{
+    font-size: 1.5em;
+    font-family: Cormorant Garamond;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 46px, auto;
+    letter-spacing: 0em;
+    text-align: left;
+   }
+    .icon-container {
+      display: flex;
+      align-items: center; /* Centra los íconos verticalmente */
+      justify-content:right; /* Espacia los íconos uniformemente */
+      color: white;
+      gap: 0px; /* Espacio entre los íconos */
+    }
+  
+  
+    .icon {
+      width: 20px;
+      height: auto; /* Mantiene la proporción de aspecto del ícono */
+      filter: invert(99%) sepia(3%) saturate(2%) hue-rotate(96deg) brightness(106%)
+        contrast(97%); /* convierte los iconos negros en blanco */
+      padding: 20px; /* Espaciado alrededor de los íconos */
+      margin: 10px; /* Ajusta la separación entre íconos */
+      margin-right: -5px;
+    }
+    
+    .navbar ul{
+        display: block;
+        position: fixed;
+        top:70px;
+        left:-100%;
+        background: #093931;
+        width: 100%;
+        height: 100vh;
+        right: 0;
+    }
+    .navbar ul .nav-link{
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+    .navbar ul .nav-link:last-child{
+        background: none;
+        padding: 1rem;
+    }
+    #check:checked ~ ul{
+        left: 0;
+        transition: all .25s;
+    }
+  }
+  
+  @media only screen and (max-width:320px
+           ){
+    .checkbtn{
+        display: block;
+    }
+  
+    .logo{
+      display: block;
+    } 
+  
+    .menu-icon{
+      display: block;
+      position: fixed;
+      top: 10px;
+      margin-left: -330px;
+      cursor: pointer;
+      align-items: center;
+      height: auto;
+      filter: invert(99%) sepia(3%) saturate(2%) hue-rotate(96deg) brightness(106%)
+      contrast(97%);
+     }
+   
+  
+   .header___mobiLenavbar{
+      display: block;
+  }
+  
+  }
 
