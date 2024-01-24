@@ -1,1 +1,391 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Manrope", sans-serif;
+  }
+  
+  .header,.product-section{
+    background-image: url('assets/fondoVectores.png'); /* Reemplaza con la ruta correcta de tu imagen */
+    background-size: cover; /* Asegura que la imagen de fondo cubra todo el espacio disponible */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center center; /* Centra la imagen de fondo */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+  .navbar {
+    background-color: #093931;
+    color: white;
+    display: flex;
+    justify-content:flex-end; /* Alinear los elementos al inicio (derecha) */
+    align-items: center; /* Alinear los elementos verticalmente al centro */
+    padding: 1rem 2rem;
+    font-family: 'Cormorant Garamond', serif;
+    flex-wrap: wrap;
+  }
+  
+  
+  .logo {
+    font-size: 2rem;
+    color: #f2c66d;
+    font-family: Cormorant Garamond;
+    margin-right: 36rem;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    margin-left: 2rem;
+  }
+  
+  .nav-link:hover::after {
+    width: 100%;
+    left: 0;
+    background-color: #f2c66d;
+  }
+  
+  .user-controls {
+    display: flex;
+    background-color: white;
+  }
+  
+  .user-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    margin-left: 1em;
+  }
+  
+  .icon:hover {
+    opacity: 0.7; /* Efecto al pasar el mouse para indicar interactividad */
+  }
+  
+  .user-icons .icon-link {
+    color: white;
+    text-decoration: none;
+    margin-left: 1rem;
+  }
+  
+  .icon{
+    margin-left: 2rem;
+  }
+
+/*seccion de las 3 imagenes y pasarela de pago */
+
+.container {
+  width: 100%;
+  max-width: 600px; /* Ajusta esto según el ancho deseado */
+  padding: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+  background-color: white;
+  border-radius: 10px;
+  margin: auto;
+  text-align: center;
+}
+
+.image-wrapper {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.gift-image {
+  width: 150px; /* Ajusta esto según el tamaño deseado */
+  height: 150px; /* Asegúrate de que sea igual al ancho para mantener la forma circular */
+  border-radius: 50%; /* Esto crea la forma circular */
+  object-fit: cover; /* Esto asegurará que la imagen cubra todo el espacio disponible */
+  right: 70%;
+  left: 30%;
+}
+
+h1 {
+  color: #171A1F;
+  font-family: "Cormorant Garamond";
+  margin: 0 0 10px;
+}
+
+p {
+  color: #666;
+  margin: 0;
+}
+
+
+.order-summary {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 350px;
+  margin: auto;
+}
+
+.order-info {
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+
+h4{
+  margin-right: 30%;
+}
+
+.mensaje-date{
+  margin-left: 6%;
+}
+
+.icon {
+  margin-right: 10px;
+  color: #888888;
+}
+
+.total .icon {
+  color: black;
+}
+
+.total .text {
+  font-weight: bold;
+}
+
+.order-items .item {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.order-items .item img {
+  border-radius: 4px;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.description .code {
+  color: #888888;
+}
+
+.description .price {
+  font-weight: bold;
+}
+
+.continue-shopping {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  background-color: #093931;
+  border-radius: 4px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* seccion footer */
+/* seccion footer */
+
+.footer {
+  width: 90rem;
+  height: 14.625rem;
+  flex-shrink: 0;
+  background: #093931;
+}
+
+.logo1 {
+  font-size: 1.5em;
+  color: #f2c66d;
+  font-weight: bold;
+  font-family: Cormorant Garamond;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 46px, auto;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: 38%;
+}
+
+.footer-buttom-copy {
+  color: #fff;
+  font-family: Manrope;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.375rem; /* 157.143% */
+  margin-top: 3%;
+  margin-left: 7%;
+}
+
+.footer-container--medio {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 7%;
+  margin-right: 7%;
+  margin-top: 7%;
+}
+
+.section-footer-items {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  margin-right: 7rem;
+  margin-top: 3%;
+}
+
+.footer-menu-right,
+.footer-menu-left {
+  color: #fff;
+  font-family: Manrope;
+  font-size: 1rem;
+  margin-bottom: 50px;
+  width: 120px;
+  height: 22px;
+  top: 50px;
+  left: 601px;
+  font-family: Manrope;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 31px;
+  /* letter-spacing: 0em; */
+  text-align: left;
+}
+
+.menu-right--p, .menu-left--p{
+  color: #fff;
+}
+
+.footer-input {
+  display: inline-flex;
+  padding: 0.4375rem 8.25rem 0.375rem 0.75rem;
+  align-items: center;
+  gap: 0.375rem;
+  border-radius: 1.125rem 0rem 0rem 1.125rem;
+  border: 1px solid #fff;
+  background: rgba(0, 0, 0, 0);
+  margin-right: -20%;
+  margin-top: -25%;
+}
+
+.footer-button {
+  display: inline-flex;
+  padding: 0.4375rem 1.46875rem 0.4375rem 1.53125rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0rem 1.125rem 1.125rem 0rem;
+  background: #f2c66d;
+  color: #6b4a09;
+  font-family: Manrope;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.375rem; /* 157.143% */
+  margin-right: 5%;
+}
+
+.footer-icons {
+  display: flex;
+  align-items: center;
+  align-items: center;
+  color: #fff;
+  position: relative;
+  left: 75%;
+  top: 60px;
+  display: inline-flex; /* Alinea los iconos en línea y permite el uso de flexbox */
+  justify-content: center; /* Centra los iconos horizontalmente */
+}
+
+.footer-icon--twitter {
+  margin-right: 20px;
+}
+
+.footer-icon--facebook {
+  margin-right: 20px;
+}
+
+.footer-icon--linkedln {
+  margin-right: 20px;
+}
+
+.footer-title--suscribe {
+  height: 30px;
+}
+
+.footer-title--suscribe {
+  color: #fff;
+  font-family: Cormorant Garamond;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.875rem; /* 150% */
+  margin-right: 20%;
+  margin-top: 4%;
+}
+
+.footer-parrafo--suscribe {
+  color: #fafafb;
+  font-family: Manrope;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem; /* 166.667% */
+}
+
+.footer-imagen--email---input {
+  display: flex;
+  align-items: center;
+  align-items: center;
+  color: #fff;
+  position: relative;
+  left: 2%;
+  top: 28px;
+}
+
+.footer--caption---button {
+  display: flex;
+  margin-left: 230px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.footer-button--caption---right,
+.footer-button--caption---left {
+  /* border-width: 0 5px 5px 0; */
+  border-color: transparent transparent white white;
+  margin-right: 10px;
+  background-color: transparent;
+  border: solid white; /* Añade un borde blanco */
+  color: white;
+  border-radius: 50%; /* Hace los botones redondos */
+}
+
+.footer-button--caption---right {
+  border-color: transparent transparent white white;
+  border: solid white;
+  border-width: 0 0px 0px 0; /* Grosor del borde para formar la flecha */
+  padding: 3px; /* Tamaño de la flecha */
+}
+
+.footer-button--caption---left {
+  border-color: transparent transparent white white;
+  border: solid white;
+  border-width: 0 0px 0px 0; /* Grosor del borde para formar la flecha */
+  padding: 3px; /* Tamaño de la flecha */
+}
 
