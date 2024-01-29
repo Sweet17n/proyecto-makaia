@@ -1,1 +1,108 @@
+onst productos = [
+   {
+     id: 1,
+     nombre: "Anillo Solitario",
+     codigo: "A001",
+     precioUnitario: 120.00,
+     tipoAccesorio: "anillo",
+     descripcion: "Anillo de oro de 18k con un diamante central solitario.",
+     stock: [
+       { color: "oro", talla: "6", cantidad: 5 },
+       { color: "oro", talla: "7", cantidad: 3 }
+     ]
+   },
+   {
+     id: 2,
+     nombre: "Brazalete de Plata",
+     codigo: "B001",
+     precioUnitario: 75.00,
+     tipoAccesorio: "brazalete",
+     descripcion: "Brazalete de plata esterlina con grabado maya.",
+     stock: [
+       { color: "plata", talla: "única", cantidad: 10 }
+     ]
+   },
+   {
+     id: 3,
+     nombre: "Collar de Perlas",
+     codigo: "C001",
+     precioUnitario: 200.00,
+     tipoAccesorio: "collar",
+     descripcion: "Elegante collar de perlas con broche de oro.",
+     stock: [
+       { color: "blanco", talla: "única", cantidad: 4 }
+     ]
+   },
+   {
+     id: 4,
+     nombre: "Aretes de Esmeralda",
+     codigo: "E001",
+     precioUnitario: 150.00,
+     tipoAccesorio: "aretes",
+     descripcion: "Aretes de oro blanco con esmeraldas naturales.",
+     stock: [
+       { color: "verde", talla: "única", cantidad: 6 }
+     ]
+   }
+ ];
 
+ 
+function filtrarProductosPorTipo(productos) {
+ const tipo = prompt("Ingrese el tipo de producto que desea filtrar (anillo, brazalete, collar, aretes, etc.):");
+   const productosFiltrados = productos.filter(producto => producto.tipoAccesorio.toLowerCase() === tipo.toLowerCase());
+    console.log("Productos filtrados por tipo '" + tipo + "':", productosFiltrados);
+  }
+ 
+//  Llamamos a la función con la lista de productos
+ filtrarProductosPorTipo(productos);
+
+ function buscarProductosPorNombre(productos, terminoBusqueda) {
+   const termino = terminoBusqueda.toLowerCase();
+   const productosEncontrados = productos.filter(producto => producto.nombre.toLowerCase().includes(termino));
+    return productosEncontrados;
+  }
+ 
+//  Aquí se le pedirá al usuario que ingrese el texto de búsqueda.
+  const terminoUsuario = prompt("Ingrese el nombre del producto que está buscando:");
+ const resultadosBusqueda = buscarProductosPorNombre(productos, terminoUsuario);
+ 
+//  Mostramos el resultado en la consola
+console.log("Productos encontrados:", resultadosBusqueda);
+
+
+ function ordenarProductosPorPrecio(productos, ascendente = true) {
+      return productos.slice().sort((a, b) => ascendente ? a.precioUnitario - b.precioUnitario : b.precioUnitario - a.precioUnitario);
+ }
+ 
+//  Llamamos a la función para ordenar de manera ascendente
+const productosOrdenadosAsc = ordenarProductosPorPrecio(productos, true);
+ console.log("Productos ordenados de manera ascendente:", productosOrdenadosAsc);
+ 
+//  Llamamos a la función para ordenar de manera descendente
+ const productosOrdenadosDesc = ordenarProductosPorPrecio(productos, false);
+  console.log("Productos ordenados de manera descendente:", productosOrdenadosDesc);
+ 
+ 
+function calcularTotalCompra() {
+   let carritoDeCompras = [];
+   let seguirAgregando = true;
+ 
+   while (seguirAgregando) {
+     const cantidad = parseInt(prompt("Ingrese la cantidad del producto:"));
+     const precioUnitario = parseFloat(prompt("Ingrese el precio unitario del producto:"));
+     
+     carritoDeCompras.push({ cantidad, precioUnitario });
+ 
+     seguirAgregando = confirm("¿Desea agregar otro producto al carrito?");
+   }
+ 
+   const total = carritoDeCompras.reduce((acumulador, producto) => {
+     return acumulador + producto.cantidad * producto.precioUnitario;
+   }, 0);
+ 
+   console.log("El total a pagar por la compra es:", total);
+ }
+ 
+ // Ejecutar la función
+ calcularTotalCompra();
+ 
